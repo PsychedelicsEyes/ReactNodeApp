@@ -36,5 +36,10 @@ export default api;
 >>
 >>__Don't forget__ you have predefine breakpoint for media queries in ./client/src/assets/style/breakpoint.scss
 
+## 🚧Launch the application
+>In ./client/ and ./api/ run the command
+```
+npm start
+```
 ## 🚧End of Readme
 Made with ❤️
