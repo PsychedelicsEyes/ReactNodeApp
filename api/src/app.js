@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const helmet = require("helmet"); // Pour la sécurité
-const cors = require("cors"); // Pour gérer les requêtes cross-origin
-const morgan = require("morgan"); // Pour le logging
+const helmet = require("helmet"); 
+const cors = require("cors"); 
+const morgan = require("morgan"); 
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 dotenv.config();
@@ -41,6 +41,9 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Something went wrong!");
 });
+
+const exampleRoutes = require("./Routes/example");
+app.use("/api/example", exampleRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
